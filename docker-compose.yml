@@ -1,0 +1,18 @@
+version: '3.9'
+
+networks:
+    expenditurr:
+        driver: bridge
+
+services:
+  database:
+    image: postgres:16
+    networks:
+      - expenditurr
+    ports:
+      - 15432:5432
+    environment:
+      - POSTGRES_PASSWORD=$DATABASE_PWD
+      - POSTGRES_USER=exprr_dba
+      - POSTGRES_DB=expenditurr
+    
