@@ -28,6 +28,7 @@ Once your database is UP and Running, then start the application:
 # if it's your first run, the official website recommends running this command before
 $ stack install yesod-bin --install-ghc
 
-# start the WARP server listening at port :10000
-$ YESOD_PGPASS=<dummy_password> stack exec -- yesod devel
+# start the WARP server listening at port :10000, leave blank for the default :3000
+# check config/settings.yml for further references
+$ YESOD_PGPASS=<dummy_password> stack exec -- yesod devel -p 10000
 ```
